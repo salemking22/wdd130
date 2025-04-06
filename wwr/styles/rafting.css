@@ -1,0 +1,80 @@
+:root {
+    --primary-color: #FFEAEE;
+    --secondary-color: #414535;
+    --font-heading: 'Merriweather', serif;
+    --font-body: 'Roboto', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--secondary-color);
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: black;
+    padding: 1em;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5em;
+  }
+  
+  .hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .hero h1 {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-family: var(--font-heading);
+    font-size: 2em;
+    color: white;
+  }
+  
+  article {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1em;
+    border-radius: 5px;
+  }
+  
+  article img {
+    float: right;
+    width: 150px;
+    margin-left: 1em;
+  }
+  
+  section h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1em;
+    background-color: var(--primary-color);
+    color: black;
+  }
+  
+  .sociallinks a img {
+    width: 30px;
+    margin: 0 0.5em;
+  }
+  
+  .sociallinks a {
+    text-decoration: none;
+  }
+  
