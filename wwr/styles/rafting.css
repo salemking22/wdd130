@@ -24,35 +24,51 @@ body {
 }
 
 header {
-  padding: 20px 0;
-}
-.header-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
 }
 .logo {
   max-width: 150px;
   height: auto;
+  margin-left: 20px
 }
 
 header nav {
   display: flex;
-  gap: 2px; 
+  gap: 20px; 
 }
-header nav a {
+.navigation {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navigation li a {
   text-decoration: none;
   color: var(--secondary-color);
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  padding: 10px 15px;
+}
+header nav li a.active {
+  color: var(--accent-color);
 }
 
 .hero {
   position: relative;
-  margin-bottom: 40px;
+margin-bottom: 40px;
 }
 .hero img {
   display: block;
@@ -118,20 +134,29 @@ header nav a {
   margin-bottom: 10px;
 }
 
-.adventure .rafting-images {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
+.rafter-images,
+.rafting-images {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Exactly five equal columns */
+  gap: 20px;
 }
-.adventure .rafting-images img {
-  width: 250px;
+  
+.rafting-images figure {
+  text-align: center;
+}
+.rafting-images img {
+  width: 100%;
   height: auto;
   display: block;
 }
+.rafting-images figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
 
 footer {
-  text-align: left;
+  text-align: center;
   padding: 20px 0;
   background-color: var(--accent-color);
   margin-top: 40px;
@@ -144,7 +169,7 @@ footer p {
 
 footer nav.sociallinks {
   display: flex;
-  justify-content: left;
+  justify-content: flex-end;
   gap: 15px;
 }
 footer nav.sociallinks a {
