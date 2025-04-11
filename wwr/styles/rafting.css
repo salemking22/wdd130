@@ -1,181 +1,186 @@
 :root {
---primary-color: #e9edf1;
-  --secondary-color: #02010c;
-  --background-color: #f1eeee;
-  --heading-color: #190101;
-  --text-color: #0c0101;
-  --accent-color: #3311f4;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  color: var(--text-color);
-  background-color: var(--background-color);
-  line-height: 1.6;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-header {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  padding: 20px;
-  border-bottom: 1px solid #ccc;
-}
-.header {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  padding: 20px;
-  border-bottom: 1px solid #ccc;
-}
-.logo {
-  max-width: 150px;
-  height: auto;
-  margin-left: 20px
-}
-
-header nav {
-  display: flex;
-  gap: 20px; 
-}
-.navigation {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.navigation li a {
-  text-decoration: none;
-  color: var(--secondary-color);
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 10px 15px;
-}
-header nav li a.active {
-  color: var(--accent-color);
-}
-
-.hero {
-  position: relative;
-margin-bottom: 40px;
-}
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.hero h1 {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-family: 'Merriweather', serif;
-  font-size: 2.5em;
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8)
-}
-
-.hero article {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(5, 2, 14, 0.8);
-  padding: 20px;
-  width: 90%;
-  max-width: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.hero article p {
-  flex: 1;
-  margin-right: 20px;
-  color:white ;
-}
-.hero article img {
-  width: 150px;
-  height: auto;
-}
-
-.history {
-  margin-bottom: 40px;
-}
-.history h2 {
-  font-family: 'Merriweather', serif;
-  font-size: 2em;
-  color: var(--heading-color);
-  margin-bottom: 10px;
-}
-.history p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1em;
-  color: var(--text-color);
-}
-
-.adventure {
-  margin-bottom: 40px;
-}
-.adventure h2 {
-  font-family: 'Merriweather', serif;
-  font-size: 2em;
-  color: var(--heading-color);
-  margin-bottom: 10px;
-}
-
-.rafter-images,
-.rafting-images {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Exactly five equal columns */
-  gap: 20px;
-}
+  --primary-color: #e9edf1;
+    --secondary-color: #02010c;
+    --background-color: #f1eeee;
+    --heading-color: #190101;
+    --text-color: #0c0101;
+    --accent-color: #3311f4;
+  }
   
-.rafting-images figure {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+  }
+  .header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+  header .logo {
+    max-width: 150px;
+    height: auto;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; 
+  }
+  header nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  header nav a:hover {
+    color: var(--accent-color); /* Change text color on hover */
+    text-decoration: underline; /* Optional - adds an underline for clarity */
+    transition: color 0.3s ease; /* Smooth color transition */
+  }
+  
+  
+  main h1, .main h2 {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  color: var(--heading-color);
+  margin: 20px 0;
+ }
+
+ .contact-info ul {
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+.contact-info ul li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.wireframe-link {
+  color: #0077cc;
+  text-decoration: underline;
+}
+
+.map iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+}
+
+.profiles {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.profiles figure {
   text-align: center;
 }
-.rafting-images img {
-  width: 100%;
+
+.profiles img {
+  max-width: 150px;
   height: auto;
-  display: block;
+  border-radius: 50%;
 }
-.rafting-images figcaption {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: var(--text-color);
+
+.contact-form {
+  margin: 20px 0;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+}
+
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.contact-form button {
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background-color: #5640ff;
+  color: #fff;
+  transform: scale(1.05); 
+  transition: all 0.3s ease; 
 }
 
 footer {
-  text-align: center;
-  padding: 20px 0;
-  background-color: var(--accent-color);
-  margin-top: 40px;
-}
-footer p {
-  font-family: 'Roboto', sans-serif;
-  margin-bottom: 10px;
-  color: var(--secondary-color);
+  position: relative;
 }
 
-footer nav.sociallinks {
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
+ footer nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
 }
-footer nav.sociallinks a {
-  text-decoration: none;
-}
-footer nav.sociallinks img {
-  width: 30px;
+
+footer nav a img {
+  width: 100px;
   height: auto;
 }
+
+  footer p {
+    font-family: 'Roboto', sans-serif;
+    color: var(--secondary-color)
+}
+  
+  footer nav.sociallinks {
+    display: flex;
+    gap: 15px;
+}
+
+  footer nav.sociallinks img {
+    width: 10px;
+    height: auto;
+  }
+
+  footer nav a img:hover {
+    transform: scale(1.1); /* Slightly enlarges the icon */
+    transition: transform 0.2s ease-in-out; /* Smooth animation */
+  }
+  
