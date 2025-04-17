@@ -1,186 +1,256 @@
+/* Root Variables */
 :root {
   --primary-color: #e9edf1;
-    --secondary-color: #02010c;
-    --background-color: #f1eeee;
-    --heading-color: #190101;
-    --text-color: #0c0101;
-    --accent-color: #3311f4;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Roboto', sans-serif;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    line-height: 1.6;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  header {
-    padding: 20px;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
-  }
-  .header {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
- }
+  --secondary-color: #02010c;
+  --background-color: #f1eeee;
+  --heading-color: #190101;
+  --text-color: #0c0101;
+  --accent-color: #3311f4;
+}
 
-  header .logo {
-    max-width: 150px;
-    height: auto;
-  }
-  
-  header nav {
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px; 
-  }
-  header nav a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 0.9rem;
-  }
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  header nav a:hover {
-    color: var(--accent-color); /* Change text color on hover */
-    text-decoration: underline; /* Optional - adds an underline for clarity */
-    transition: color 0.3s ease; /* Smooth color transition */
-  }
-  
-  
-  main h1, .main h2 {
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .logo {
+  max-width: 150px;
+  height: auto;
+}
+header nav {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+header nav a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+header nav a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+/* Main Headings */
+main h1,
+main h2 {
   text-align: center;
   font-family: 'Merriweather', serif;
   color: var(--heading-color);
   margin: 20px 0;
- }
-
- .contact-info ul {
-  list-style-type: none;
-  margin: 20px 0;
 }
 
-.contact-info ul li {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.wireframe-link {
-  color: #0077cc;
-  text-decoration: underline;
-}
-
-.map iframe {
-  width: 100%;
-  height: 350px;
-  border: none;
-}
-
-.profiles {
-  display: flex;
-  gap: 20px;
-  justify-content: space-around;
-  margin: 20px 0;
-}
-
-.profiles figure {
+/* Hero Section Container */
+.hero {
+  position: relative;
+  background: url('../images/hero.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  padding: 40px 20px;
   text-align: center;
+  overflow: hidden;
+  max-height: 40vh;
+  width: 90%;
+  margin: 20px auto;
 }
 
-.profiles img {
-  max-width: 150px;
-  height: auto;
-  border-radius: 50%;
+/* Overlay for better readability */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
-.contact-form {
+/* Content wrapper places text above overlay */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Hero Heading - shifted upward */
+.hero-content h1 {
+  font-size: 2.0em;       /* Adjusted font size */
+  margin-top: -30px;      /* Moderate upward shift */
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Mission & Client Details Container (Two Columns) */
+.mission-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
   margin: 20px 0;
 }
 
-.contact-form label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
+.mission-text {
+  flex: 1;
+  text-align: center;    /* Center the text within this column */
+  /* You may want to remove padding-right if it interferes with centering */
+  padding: 0 20px;
+  font-size: 1.2em;
+  writing-mode: horizontal-tb;
+  min-width: 300px;
+}
+.mission-text p {
+  white-space: normal;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
+/* Right Column: Client Details (Image & Testimonial) */
+.client-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.client-img {
+  max-width: 80px;        /* Reduced image size */
   width: 100%;
-  padding: 10px;
+  height: auto;
   margin-bottom: 10px;
-  border: 1px solid var(--secondary-color);
-  border-radius: 5px;
+  transform: translateY(-55px);  /* This line moves the image upward */
 }
 
-.contact-form input[type="radio"],
-.contact-form input[type="checkbox"] {
-  margin-right: 5px;
+.testimonial {
+  font-style: italic;
+  font-size: 1em;         /* Reduced font size */
+  text-align: right;
+  margin-top: 30px;
 }
 
-.contact-form button {
-  background-color: var(--accent-color);
+.client-name {
+  display: block;
+  font-size: 0.9em;       /* Smaller font size for attribution */
+  margin-top: 10px;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  background: #ff7f50;
   color: #fff;
-  padding: 10px 20px;
-  border: none;
+  padding: 12px 25px;     /* Reduced padding */
+  text-decoration: none;
+  font-size: 1em;         /* Smaller font size */
   border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
+  margin-top: 20px;
+  transition: background 0.3s ease;
 }
 
-.contact-form button:hover {
-  background-color: #5640ff;
-  color: #fff;
-  transform: scale(1.05); 
-  transition: all 0.3s ease; 
+.cta-button:hover {
+  background: #ff5722;
 }
 
+/* Adventure & History Section Styles */
+.history h2,
+.adventure h2 {
+  text-align: left;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.adventure figure {
+  text-align: left;
+  margin: 10px 0;
+  margin-left: 0 !important;
+}
+
+.adventure figure img {
+  max-width: 120px !important;
+  width: auto !important;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+.adventure figure figcaption {
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  margin-top: 5px;
+}
+
+/* First Figure Overlay (if used) */
+.first-figure {
+  position: relative;
+  display: inline-block;
+}
+
+.first-figure img {
+  max-width: 120px !important;
+  width: auto !important;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+.first-figure .overlay-title {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: #ffffff;
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 5px;
+  margin: 0;
+}
+
+/* Footer Styles */
 footer {
   position: relative;
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
 }
 
- footer nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10px;
+footer nav.sociallinks {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 10px;
 }
 
-footer nav a img {
-  width: 100px;
+footer nav.sociallinks a img {
+  width: 30px;
   height: auto;
 }
 
-  footer p {
-    font-family: 'Roboto', sans-serif;
-    color: var(--secondary-color)
+footer p {
+  color: var(--secondary-color);
+  text-align: left;
+  margin: 0;
 }
-  
-  footer nav.sociallinks {
-    display: flex;
-    gap: 15px;
-}
-
-  footer nav.sociallinks img {
-    width: 10px;
-    height: auto;
-  }
-
-  footer nav a img:hover {
-    transform: scale(1.1); /* Slightly enlarges the icon */
-    transition: transform 0.2s ease-in-out; /* Smooth animation */
-  }
-  

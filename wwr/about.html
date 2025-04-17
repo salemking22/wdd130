@@ -11,11 +11,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   
+  <!-- Link to external CSS -->
   <link rel="stylesheet" href="styles/rafting.css">
 </head>
-<body>
+<body class="about-us">
   <header>
-    <img src="images/logo.png" alt="Raft Adventures Logo">
+    <img src="images/logo.png" alt="Raft Adventures Logo" class="logo">
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
@@ -23,38 +24,60 @@
       <a href="contact.html">Contact Us</a>
     </nav>
   </header>
+  
   <main>
-    <div class="hero">
-      <img src="images/hero.jpg" alt="Rafting Adventure Hero Image">
-      <h1>Raft Adventures</h1>
-      <article>
-      <h2>Our Mission</h2>
-        <p>
-          At Raft Adventures, we combine the thrill of white water rafting with nature’s beauty. Our mission is to offer unforgettable journeys, create life-long memories, and ensure every rapid conquered is a story to tell.
-        </p>
-        <img src="images/client.jpg" alt="Happy Client">
-      </article>
-    </div>
-    
-    <section class="history">
-      <h2>History</h2>
-      <p>
-        Founded in the early 2000s, Raft Adventures began as a small dream of exploring untamed rivers. Over the years, our passion for adventure has evolved into a full-service rafting company dedicated to safety, environmental respect, and exhilarating experiences.
-      </p>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Ride the Rapids, Embrace the Adventure!</h1>
+        
+        <!-- Mission & Client Details in Two Columns -->
+        <div class="mission-container">
+          <!-- Left Column: Mission Statement -->
+          <div class="mission-text">
+            <p class="mission">
+              At White Water Rafting Company, we believe every adventure should be thrilling and unforgettable.
+            </p>
+          </div>
+          <!-- Right Column: Client Image with Testimonial underneath -->
+          <div class="client-details">
+            <img src="images/client.jpg" alt="Happy Client" class="client-img">
+            <blockquote class="testimonial">
+              “An experience like no other! The guides were incredible, and the adrenaline rush was unforgettable. Highly recommended!”<br>
+              <span class="client-name">– John Doe</span>
+            </blockquote>
+          </div>
+        </div>
+        
+        <a href="#trips" class="cta-button">Book Your Trip Now</a>
+      </div>
     </section>
     
     <section class="adventure">
       <h2>Adventure Awaits You!</h2>
-      <div class="rafting-images">
+      <figure>
         <img src="images/raft1.jpg" alt="Rafting Excursion 1">
+        <figcaption>Experience thrilling rapids with expert guides.</figcaption>
+      </figure>
+      <figure>
         <img src="images/raft2.jpg" alt="Rafting Excursion 2">
+        <figcaption>Ride through intense rapids for an adrenaline rush.</figcaption>
+      </figure>
+      <figure>
         <img src="images/raft3.jpg" alt="Rafting Excursion 3">
-        <img src="images/raft4.jpg" alt="Rafting Excursion 4">
-        <img src="images/raft5.jpg" alt="Rafting Excursion 5">
-      </div>
+        <figcaption>Teamwork is key to navigating the waves.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/raft4.jpg" alt="Scenic view of a river rafting site">
+        <figcaption>Enjoy breathtaking landscapes while rafting.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/raft5.jpg" alt="Happy rafters celebrating after the ride">
+        <figcaption>Celebrate your rafting journey with unforgettable memories.</figcaption>
+      </figure>
     </section>
   </main>
-
+  
   <footer>
     <p>&copy; 2025 Raft Adventures | Cynthia</p>
     <nav class="sociallinks">
