@@ -1,5 +1,4 @@
-/* Root Variables */
-:root {
+:root { /* Root Variables */
   --primary-color: #e9edf1;
   --secondary-color: #02010c;
   --background-color: #f1eeee;
@@ -8,7 +7,6 @@
   --accent-color: #3311f4;
 }
 
-/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -25,7 +23,6 @@ body {
   padding: 20px;
 }
 
-/* Header Styles */
 header {
   padding: 20px;
   display: flex;
@@ -36,11 +33,7 @@ header .logo {
   max-width: 150px;
   height: auto;
 }
-header nav {
-  display: flex;
-  gap: 20px;
-  justify-content: flex-end;
-}
+
 header nav a {
   text-decoration: none;
   color: var(--secondary-color);
@@ -48,13 +41,24 @@ header nav a {
   font-weight: bold;
   font-size: 0.9rem;
 }
-header nav a:hover {
-  color: var(--accent-color);
-  text-decoration: underline;
-  transition: color 0.3s ease;
+    
+    header nav {
+      margin-left: auto;
+      display: flex;
+      gap: 20px;
+    }
+
+    header nav a:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+.trips-page h2 {
+  text-align: left !important;
+  margin-left: 20px !important;
 }
 
-/* Main Headings */
 main h1,
 main h2 {
   text-align: center;
@@ -63,7 +67,11 @@ main h2 {
   margin: 20px 0;
 }
 
-/* Hero Section Container */
+.trips-page h1 {
+  text-align: left !important;
+  margin-left: 20px !important;
+}
+
 .hero {
   position: relative;
   background: url('../images/hero.jpg') no-repeat center center;
@@ -77,7 +85,6 @@ main h2 {
   margin: 20px auto;
 }
 
-/* Overlay for better readability */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -88,7 +95,6 @@ main h2 {
   z-index: 0;
 }
 
-/* Content wrapper places text above overlay */
 .hero-content {
   position: relative;
   z-index: 1;
@@ -96,16 +102,14 @@ main h2 {
   margin: 0 auto;
 }
 
-/* Hero Heading - shifted upward */
 .hero-content h1 {
-  font-size: 2.0em;       /* Adjusted font size */
-  margin-top: -30px;      /* Moderate upward shift */
+  font-size: 2.0em;      
+  margin-top: -30px;      
   margin-bottom: 20px;
   font-weight: bold;
   color: #fff;
 }
 
-/* Mission & Client Details Container (Two Columns) */
 .mission-container {
   display: flex;
   justify-content: space-between;
@@ -116,8 +120,8 @@ main h2 {
 
 .mission-text {
   flex: 1;
-  text-align: center;    /* Center the text within this column */
-  /* You may want to remove padding-right if it interferes with centering */
+  text-align: center; 
+  
   padding: 0 20px;
   font-size: 1.2em;
   writing-mode: horizontal-tb;
@@ -127,7 +131,6 @@ main h2 {
   white-space: normal;
 }
 
-/* Right Column: Client Details (Image & Testimonial) */
 .client-details {
   display: flex;
   flex-direction: column;
@@ -135,33 +138,32 @@ main h2 {
 }
 
 .client-img {
-  max-width: 80px;        /* Reduced image size */
+  max-width: 80px;      
   width: 100%;
   height: auto;
   margin-bottom: 10px;
-  transform: translateY(-55px);  /* This line moves the image upward */
+  transform: translateY(-55px);  
 }
 
 .testimonial {
   font-style: italic;
-  font-size: 1em;         /* Reduced font size */
+  font-size: 1em;      
   text-align: right;
   margin-top: 30px;
 }
 
 .client-name {
   display: block;
-  font-size: 0.9em;       /* Smaller font size for attribution */
+  font-size: 0.9em;   
   margin-top: 10px;
 }
 
-/* Call-to-Action Button */
 .cta-button {
   background: #ff7f50;
   color: #fff;
-  padding: 12px 25px;     /* Reduced padding */
+  padding: 12px 25px; 
   text-decoration: none;
-  font-size: 1em;         /* Smaller font size */
+  font-size: 1em;       
   border-radius: 5px;
   margin-top: 20px;
   transition: background 0.3s ease;
@@ -171,7 +173,6 @@ main h2 {
   background: #ff5722;
 }
 
-/* Adventure & History Section Styles */
 .history h2,
 .adventure h2 {
   text-align: left;
@@ -200,7 +201,6 @@ main h2 {
   margin-top: 5px;
 }
 
-/* First Figure Overlay (if used) */
 .first-figure {
   position: relative;
   display: inline-block;
@@ -227,7 +227,126 @@ main h2 {
   margin: 0;
 }
 
-/* Footer Styles */
+body.contact-us .employee-profiles .profiles {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  gap: 20px !important;
+}
+
+body.contact-us .employee-profiles .profiles figure {
+  flex: 0 0 300px !important; 
+  text-align: center;
+  margin: 0;
+}
+
+body.contact-us .employee-profiles .profiles figure img {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+body.contact-us .header-right {
+  margin-left: auto;
+}
+
+body.contact-us .social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label,
+.contact-form p {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form .radio-group {
+  margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.contact-form input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+
+.contact-info p {
+  margin-top: -15px;
+  margin-bottom: 15px;
+}
+
+
+.trips-page h1 {
+  text-align: left !important;
+  margin-left: 5px;
+}
+
+.trips-page h1 {
+  text-align: left !important;
+  margin-left: 20px !important;
+}
+
+
+.trips-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.trips-page .trip-table-section {
+  margin-bottom: 40px;
+}
+
+.trips-page .trip-table-section h3 {
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.trips-page .trip-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.trips-page .trip-table th,
+.trips-page .trip-table td {
+  padding: 15px 20px;
+  border: 1px solid var(--secondary-color);
+  text-align: left;
+}
+
+.trips-page .contact-cta {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.trips-page .contact-cta h3 {
+  margin-bottom: 20px;
+}
+
+.trips-page .contact-cta p {
+  margin-bottom: 20px;
+}
+
+
 footer {
   position: relative;
   text-align: center;
@@ -254,3 +373,60 @@ footer p {
   text-align: left;
   margin: 0;
 }
+
+.home-page {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f1eeee;
+  padding: 20px;
+  line-height: 1.6;
+  color: #0c0101;
+}
+
+.home-page .hero .hero-overlay .hero-heading {
+  margin-bottom: 10px;
+}
+
+.home-page .hero .hero-overlay .hero-quote {
+  margin-top: 10px;
+}
+
+.home-page .cta-section .cta-content h3 {
+  margin-bottom: 15px;
+}
+
+.home-page .cta-section .cta-content p {
+  margin-bottom: 20px;
+}
+
+.home-page .newsletter-section h3 {
+  margin-bottom: 15px;
+}
+
+.home-page .newsletter-section form {
+  margin-top: 10px;
+}
+
+.home-page .info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+  margin-top: 40px;
+}
+
+.home-page .info-grid .grid-item h4 {
+  margin-bottom: 10px;
+}
+
+.home-page .info-grid .grid-item p {
+  margin-bottom: 15px;
+}
+
+.home-page footer p {
+  margin-top: 20px;
+}
+
+.home-page .hero .hero-overlay .hero-heading {
+  color: #fff;           
+  text-transform: uppercase; 
+}
+
